@@ -10,7 +10,7 @@ use App\Http\Requests\StoreUserRequest;
 use App\Http\Requests\UpdateUserRequest;
 
 
-class UsersController extends Controller
+class UserController extends Controller
 {
 
     /**
@@ -20,7 +20,8 @@ class UsersController extends Controller
      */
     public function index()
     {
-        //
+        $user = User::all();
+        return view('user.index', compact('user'));
     }
 
     /**
@@ -30,8 +31,9 @@ class UsersController extends Controller
      */
     public function create()
     {
-        //
+        return view('user.create');
     }
+
 
     /**
      * Store a newly created resource in storage.
@@ -39,8 +41,13 @@ class UsersController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(UpdateUserRequest $request)
+    public function store(StoreUserRequest $request)
     {
+        // Os campos já foram validados pelo StoreUserRequest
+        $data = $request->validated();
+        $data['password'] = Hash::make($data['password']);
+
+        return redirect()->route('user.index')->with('success', 'Usuário cadastrado com sucesso!');
     }
 
     /**
@@ -49,10 +56,11 @@ class UsersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    // public function show($id)
-    // {
-
-    // }
+    public function edit($id)
+    {
+        $user = User::findOrFail($id);
+        return view('user.edit', compact('user'));
+    }
 
     /**
      * Update the specified resource in storage.
@@ -63,17 +71,21 @@ class UsersController extends Controller
      */
     public function update(UpdateUserRequest $request, $id)
     {
-        //
-        // $user =  User::find($id);
-        // $user->name = $request->input('name');
-        // $user->email = $request->input('email');
-        // $user->password = Hash::make($request->input('password'));
+        // Os campos já foram validados pelo UpdateUserRequest
+        $data = $request->validated();
 
-        // return $user->save();
-        // return redirect()->route('main.index')->with(
-        //     'update',
-        //     'user has been updated!'
-        // );
+        // Se a senha foi fornecida no formulário, ela será atualizada
+        if (!empty($data['password'])) {
+            $data['password'] = Hash::make($data['password']);
+        } else {
+            // Se a senha não foi fornecida, remova-a dos dados a serem atualizados
+            unset($data['password']);
+        }
+
+        $user = User::findOrFail($id);
+        $user->update($data);
+
+        return redirect()->route('user.index')->with('success', 'Usuário atualizado com sucesso!');
     }
 
     /**
@@ -82,13 +94,10 @@ class UsersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Request $request)
+    public function destroy($id)
     {
-
-        //return User::find($request->input('id'))->delete();
-        //     redirect()->route('main.index')->with(
-        //         'delete',
-        //         'user has been delete!'
-        //     );
+        $user = User::findOrFail($id);
+        $user->delete();
+        return redirect()->route('user.index')->with('success', 'Usuário excluído com sucesso!');
     }
 }

@@ -1,3 +1,4 @@
+<!-- resources/views/users/create.blade.php -->
 @extends('layouts.app')
 
 @section('content')
@@ -5,12 +6,11 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Registrar') }}</div>
+                <div class="card-header">{{ __('Cadastrar') }}</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}">
+                    <form method="post" action="{{ route('user.store') }}">
                         @csrf
-
                         <div class="row mb-3">
                             <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Name') }}</label>
 
@@ -64,14 +64,18 @@
                         <div class="row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
-                                    {{ __('Registrar') }}
+                                    {{ __('Cadastrar') }}
                                 </button>
-                            </div>
-                        </div>
+                                <a href="{{ route('user.index') }}" class="btn btn-secondary">Cancelar</a>
                     </form>
                 </div>
             </div>
+            </form>
         </div>
+
     </div>
 </div>
+</div>
+</div>
+
 @endsection
