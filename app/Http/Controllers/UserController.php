@@ -41,14 +41,6 @@ class UsersController extends Controller
      */
     public function store(UpdateUserRequest $request)
     {
-        // $user = User::create([
-        //     'name' => $request['name'],
-        //     'email' => $request['email'],
-        //     'password' => Hash::make($request['password']),
-        // ]);
-
-        // return response($user, 200)->header('Content-Type', 'text/plain');
-        return "Store";
     }
 
     /**
@@ -59,9 +51,7 @@ class UsersController extends Controller
      */
     // public function show($id)
     // {
-    //     // return view('user.profile', [
-    //     //     'user' => User::findOrFail($id)
-    //     // ]);
+
     // }
 
     /**
@@ -74,12 +64,12 @@ class UsersController extends Controller
     public function update(UpdateUserRequest $request, $id)
     {
         //
-        $user =  User::find($id);
-        $user->name = $request->input('name');
-        $user->email = $request->input('email');
-        $user->password = Hash::make($request->input('password'));
+        // $user =  User::find($id);
+        // $user->name = $request->input('name');
+        // $user->email = $request->input('email');
+        // $user->password = Hash::make($request->input('password'));
 
-        return $user->save();
+        // return $user->save();
         // return redirect()->route('main.index')->with(
         //     'update',
         //     'user has been updated!'
@@ -95,7 +85,7 @@ class UsersController extends Controller
     public function destroy(Request $request)
     {
 
-        return User::find($request->input('id'))->delete();
+        //return User::find($request->input('id'))->delete();
         //     redirect()->route('main.index')->with(
         //         'delete',
         //         'user has been delete!'
