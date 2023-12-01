@@ -1,61 +1,85 @@
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://static.wixstatic.com/media/54d165_d986d9ffd9c240d48be86b3c6143604b~mv2_d_5468_1474_s_2.png/v1/fill/w_209,h_56,al_c,q_95,enc_auto/Logo_Horizontal_Colorida.png" width="400" alt="Laravel Logo"></a></p>
 
 
+# Desafio First Decision - Laravel, Vite, Bootstrap e PostgreSQL
 
-## Introdução ao Desafio: Desenvolvedor PHP + Laravel
+Bem-vindo ao Desafio First Decision! Este desafio tem como objetivo criar um cadastro de usuário com o framework Laravel, Laravel, Vite, Bootstrap e o banco de dados PostgreSQL. Siga as instruções abaixo para baixar, configurar e buildar o projeto.
 
-O Caso de uso foi implementado utilizando 
+## Instruções
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### 1. Clonar o Repositório
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Para começar, clone o repositório do GitHub localmente. Abra o terminal e execute o seguinte comando:
 
-## Learning Laravel
+```bash
+git clone https://github.com/passocurto/desafioFirstDecision.git
+```
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### 2. Instalar Dependências
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+Navegue até o diretório do projeto e instale as dependências do Composer:
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+```bash
+cd desafioFirstDecision
+composer install
+```
 
-## Laravel Sponsors
+Em seguida, instale as dependências do npm:
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+```bash
+npm install
+```
 
-### Premium Partners
+Abra o arquivo `.env` e configure as informações do banco de dados PostgreSQL, bem como outras configurações necessárias. Certifique-se de definir as informações do banco de dados nos campos DB_DATABASE, `DB_DATABASE`, `DB_PASSWORD`.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+### 3. Gerar a Chave de Aplicativo
 
-## Contributing
+Execute o seguinte comando para gerar a chave de aplicativo:
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+```bash
+php artisan key:generate
+```
 
-## Code of Conduct
+### 4. Executar as Migrações do Banco de Dados
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Execute as migrações para criar as tabelas do banco de dados:
 
-## Security Vulnerabilities
+```bash
+php artisan migrate
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### 5. Buildar os Ativos
 
-## License
+Para buildar os ativos (assets) usando o Vite, execute:
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+```bash
+npm run dev
+```
+
+Se estiver em ambiente de produção, você pode usar:
+
+```bash
+npm run build
+```
+
+### 6. Iniciar o Servidor
+
+Inicie o servidor embutido do Laravel:
+
+```bash
+php artisan serve
+```
+
+O servidor estará acessível em `http://localhost:8000` por padrão.
+
+### 7. Acesse no Navegador
+
+Abra o navegador e acesse o seguinte URL para verificar se o projeto está funcionando corretamente:
+
+```
+http://localhost:8000
+```
+
+### 8. Realize o Desafio
+
+Agora que o ambiente está configurado, explore o projeto e participe do desafio conforme as instruções fornecidas.

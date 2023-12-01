@@ -46,6 +46,7 @@ class UserController extends Controller
         // Os campos já foram validados pelo StoreUserRequest
         $data = $request->validated();
         $data['password'] = Hash::make($data['password']);
+        User::create($data);
 
         return redirect()->route('user.index')->with('success', 'Usuário cadastrado com sucesso!');
     }
@@ -71,6 +72,7 @@ class UserController extends Controller
      */
     public function update(UpdateUserRequest $request, $id)
     {
+
         // Os campos já foram validados pelo UpdateUserRequest
         $data = $request->validated();
 
