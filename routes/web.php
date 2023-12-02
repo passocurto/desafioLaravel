@@ -25,7 +25,6 @@ Auth::routes();
 //Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('user.index');
 
 // ROTAS CASO DE USO USER
-
 Route::get('/', function () {
     return redirect('/user');
 });
@@ -36,9 +35,9 @@ Route::get('/user/create', [UserController::class, 'create'])->name('user.create
 // ARMAZENAR NOVO USUÁRIO
 Route::post('/user/store', [UserController::class, 'store'])->name('user.store');
 // FORMULÁRIO DE EDIÇÃO DE USUÁRIO
-Route::get('/user/{id}/edit', [UserController::class, 'edit'])->name('user.edit');
+Route::get('/user/{id}', [UserController::class, 'edit'])->name('user.edit');
 // ATUALIZAR USUÁRIO
-Route::put('/user/{id}/update', [UserController::class, 'update'])->name('user.update');
+Route::put('/user/{id}', [UserController::class, 'update'])->name('user.update');
 // EXCLUIR USUÁRIO
-Route::delete('/user/{id}/destroy', [UserController::class, 'destroy'])->name('user.destroy');
+Route::delete('/user/{id}', [UserController::class, 'destroy'])->name('user.destroy');
 // ROTAS CASO DE USO USER
