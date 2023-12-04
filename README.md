@@ -98,7 +98,7 @@ Agora que o ambiente está configurado, explore o projeto conforme as instruçõ
 
 ![Imgur](https://i.imgur.com/ycU6AAu.png)
 
-### 2. Tela de Cadastro   https://imgur.com/wuiJ0Qe
+### 2. Tela de Cadastro  
 
 ![Imgur](https://i.imgur.com/faUTRGJ.png)
 
