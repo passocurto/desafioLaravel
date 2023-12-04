@@ -89,3 +89,39 @@ http://localhost:8000
 ### 7. Explore o Projeto
 
 Agora que o ambiente está configurado, explore o projeto conforme as instruções fornecidas.
+
+
+
+# Telas do Projeto 
+
+### 1. Tela incial
+
+![Imgur](https://i.imgur.com/ycU6AAu.png)
+
+### 2. Tela de Cadastro   https://imgur.com/wuiJ0Qe
+
+![Imgur](https://i.imgur.com/faUTRGJ.png)
+
+### 2. Tela de Edição 
+
+![Imgur](https://i.imgur.com/wuiJ0Qe.png) 
+
+### 3. Tela de Exclusão 
+
+![Imgur](https://i.imgur.com/kx06hIs.png) 
+
+
+
+# API
+
+### 1. Cadastro 
+
+![Imgur](https://i.imgur.com/wi4UeLk.png) 
+
+### 2. validação no cadastro 
+
+![Imgur](https://i.imgur.com/fJeNp29.png) 
+
+
+
+
