@@ -29,10 +29,16 @@ Em seguida, instale as dependências do npm:
 ```bash
 npm install
 ```
+### 3. Configurar o Ambiente
+Copie o arquivo .env.example para um novo arquivo chamado .env:
+
+```bash
+cp .env.example .env
+```
 
 Abra o arquivo `.env` e configure as informações do banco de dados PostgreSQL, bem como outras configurações necessárias. Certifique-se de definir as informações do banco de dados nos campos DB_DATABASE, `DB_DATABASE`, `DB_PASSWORD`.
 
-### 3. Gerar a Chave de Aplicativo
+### 4. Gerar a Chave de Aplicativo
 
 Execute o seguinte comando para gerar a chave de aplicativo:
 
@@ -40,7 +46,7 @@ Execute o seguinte comando para gerar a chave de aplicativo:
 php artisan key:generate
 ```
 
-### 4. Executar as Migrações do Banco de Dados
+### 5. Executar as Migrações do Banco de Dados
 
 Execute as migrações para criar as tabelas do banco de dados:
 
@@ -48,7 +54,7 @@ Execute as migrações para criar as tabelas do banco de dados:
 php artisan migrate
 ```
 
-### 5. Buildar os Ativos
+### 6. Buildar os Ativos
 
 Para buildar os ativos (assets) usando o Vite, execute:
 
@@ -62,7 +68,7 @@ Se estiver em ambiente de produção, você pode usar:
 npm run build
 ```
 
-### 6. Iniciar o Servidor
+### 7. Iniciar o Servidor
 
 Inicie o servidor embutido do Laravel:
 
@@ -72,7 +78,7 @@ php artisan serve
 
 O servidor estará acessível em `http://localhost:8000` por padrão.
 
-### 7. Acesse no Navegador
+### 8. Acesse no Navegador
 
 Abra o navegador e acesse o seguinte URL para verificar se o projeto está funcionando corretamente:
 
@@ -80,6 +86,6 @@ Abra o navegador e acesse o seguinte URL para verificar se o projeto está funci
 http://localhost:8000
 ```
 
-### 8. Realize o Desafio
+### 7. Explore o Projeto
 
-Agora que o ambiente está configurado, explore o projeto e participe do desafio conforme as instruções fornecidas.
+Agora que o ambiente está configurado, explore o projeto conforme as instruções fornecidas.
