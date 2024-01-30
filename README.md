@@ -1,9 +1,7 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://static.wixstatic.com/media/54d165_d986d9ffd9c240d48be86b3c6143604b~mv2_d_5468_1474_s_2.png/v1/fill/w_209,h_56,al_c,q_95,enc_auto/Logo_Horizontal_Colorida.png" width="400" alt="Laravel Logo"></a></p>
 
+# Desafio - Laravel, Vite, Bootstrap e PostgreSQL
 
-# Desafio First Decision - Laravel, Vite, Bootstrap e PostgreSQL
-
-Bem-vindo ao Desafio First Decision! Este desafio tem como objetivo criar um cadastro de usuário com o framework Laravel, Laravel, Vite, Bootstrap e o banco de dados PostgreSQL. Siga as instruções abaixo para baixar, configurar e buildar o projeto.
+Bem-vindo! Este desafio tem como objetivo criar um cadastro de usuário com o framework Laravel, Laravel, Vite, Bootstrap e o banco de dados PostgreSQL. Siga as instruções abaixo para baixar, configurar e buildar o projeto.
 
 ## Instruções
 
