@@ -18,7 +18,7 @@ git clone https://github.com/passocurto/desafioLaravel.git
 Navegue até o diretório do projeto e instale as dependências do Composer:
 
 ```bash
-cd desafioFirstDecision
+cd desafioLaravel
 composer install
 ```
 
