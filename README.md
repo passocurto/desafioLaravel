@@ -10,7 +10,7 @@ Bem-vindo! Este desafio tem como objetivo criar um cadastro de usuário com o fr
 Para começar, clone o repositório do GitHub localmente. Abra o terminal e execute o seguinte comando:
 
 ```bash
-git clone https://github.com/passocurto/desafioFirstDecision.git
+git clone https://github.com/passocurto/desafioLaravel.git
 ```
 
 ### 2. Instalar Dependências
